@@ -9,7 +9,7 @@ angular.module('shortly.shorten', [])
     Links.addLink($scope.link).then(function(result){
       $scope.short={};
       $scope.short = result.code;
-
+      $scope.shortCode = "http://localhost:8000/api/links/"+$scope.short;
       $scope.loading = false;
     });
   };
