@@ -1,3 +1,10 @@
-<div id='container' ng-controller="LinksController">
- <p > {{getLinks}} </p>
+
+<div id='container'>
+<div class='navigation'>
+  <ul>
+    <li><a href='/#/links' class='index'>All Links</a></li>
+    <li><a href='/#/shorten' class='create'>Shorten</a></li>
+  </ul>
+  </div>
+ <p > {{data.links}} </p>
 </div>
