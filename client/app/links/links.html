@@ -1,19 +1,10 @@
-
 <div id='container'>
 <div class='navigation'>
   <ul>
-    <li><a href='/#/links' class='index'>All Links</a></li>
-    <li><a href='/#/shorten' class='create'>Shorten</a></li>
+    <li><a ui-sref='links' class='index'>All Links</a></li>
+    <li><a ui-sref='shorten' class='create'>Shorten</a></li>
   </ul>
   </div>
-  <div class='links'>
-  <input ng-model='match' >
-  <div class='info' ng-repeat="link in data.links | orderBy: 'visits' | filter: match ">
-    <div class='visits'> <span class='count'>Visits: {{link.visits}}</span></div>
-    <div class='title'> {{link.title}}</div>
-    <div class='original'> {{link.url}}</div>
-    <a href='{{link.base_url}}/api/links/{{link.code}}'> {{link.base_url}}/{{link.code}}</a>
-  </div>
-  </div>
-  <!-- <p>{{data.links}}</p> -->
+  <display-links></display-links>
 </div>
+

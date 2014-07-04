@@ -1,11 +1,10 @@
 <div id='container'>
 <div class='navigation'>
   <ul>
-    <li><a href='/#/links' class='index'>All Links</a></li>
-    <li><a href='/#/shorten' class='create'>Shorten</a></li>
+     <li><a ui-sref='links' class='index'>All Links</a></li>
+    <li><a ui-sref='shorten' class='create'>Shorten</a></li>
   </ul>
   </div>
-
   <form ng-submit='addLink()'>
       <input class='text' type='url' name='url' ng-model="link.url">
       <input type='submit' value='Shorten'>
